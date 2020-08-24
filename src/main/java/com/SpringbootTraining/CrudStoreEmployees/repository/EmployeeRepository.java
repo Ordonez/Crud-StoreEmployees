@@ -4,4 +4,5 @@ import com.SpringbootTraining.CrudStoreEmployees.model.StoreEmployee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmployeeRepository extends JpaRepository<StoreEmployee,Integer> {
+    StoreEmployee findByName(String name);
 }
