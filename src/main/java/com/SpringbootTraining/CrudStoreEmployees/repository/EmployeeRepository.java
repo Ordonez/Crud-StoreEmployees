@@ -5,4 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmployeeRepository extends JpaRepository<StoreEmployee,Integer> {
     StoreEmployee findByLname(String lname);
+
+    StoreEmployee findByBirthyear(String birthyear);
+
+    StoreEmployee findByEmail(String email);
 }
