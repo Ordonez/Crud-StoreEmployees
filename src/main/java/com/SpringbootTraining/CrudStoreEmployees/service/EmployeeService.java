@@ -31,8 +31,18 @@ public class EmployeeService {
         return repository.findById(id).orElse(null); // if an id is not picked up then return null
     }
     //To fetch data based on name
-    public StoreEmployee getEmployeeByName(String name) {
-        return repository.findByName(name);
+    public StoreEmployee getEmployeeByLname(String lname) {
+        return repository.findByLname(lname);
+    }
+
+    //To fetch employees based on birthyear
+    public StoreEmployee getEmployeeByBirthyear(String birthyear) {
+        return repository.findByBirthyear(birthyear);
+    }
+
+    //To fetch employees based on email
+    public StoreEmployee getEmployeeByEmail(String email) {
+        return repository.findByEmail(email);
     }
 
     //Deleting employees
